@@ -1,0 +1,20 @@
+{
+	"name": "fsattr",
+	"version": "0.0.1",
+	"main": "lib/fsattr.js",
+	"dependencies": {},
+	"devDependencies": {
+		"tap": "=0.2.4"
+	},
+	"engines": {
+		"node": ">=0.6"
+	},
+	"author": "Bill Pijewski <bill.pijewski@gmail.com>",
+	"description": "SunOS extended file attribute manipulation",
+	"repository": {
+		"type": "git",
+		"url": "git://github.com/pijewski/node-fsattr.git"
+	},
+	"test": "node ./node_modules/tap/bin/tap.js ./tests/tests.js",
+	"license":"BSD"
+}
