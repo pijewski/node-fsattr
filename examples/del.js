@@ -4,12 +4,12 @@ var fs = require('fs'),
 var file = 'sample';
 
 fs.open(file, 'w', function (err, fd) {
-	fsattr.put(file, 'fooprops', {foo: 'bar'}, function (err) {
+	fsattr.del(file, 'fooprops', function (err) {
 		if (err) {
 			console.log(err);
 			return;
 		}
-		console.log('Wrote extended attributes for \'' + file +
-		    '\' successfuly');
+		console.log('Deleted extended attributes from \'' +
+		    file + '\' successfuly');
 	});
 });

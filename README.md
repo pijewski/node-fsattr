@@ -1,5 +1,5 @@
-node-fsattr - Manipulate extended file attributes
-=================================================
+node-fsattr - manipulate SunOS extended file attributes
+=======================================================
 
 This module allows its callers to create, modify, and delete extended file
 attributes on Solaris and Solaris-derived (i.e. illumos) platforms.  Extended
@@ -19,6 +19,10 @@ fsattr.put(file, attrFile, props, function (err) {
      ....
 });
 
+fsattr.del(file, attrfile, function (err) {
+     ....
+});
+
 The extended file attributes interface provides an arbitrary namespace of files,
 and each file can contain any data.  To keep things simple and cut down on
 complexity, the API will accept a JSON object per attribute file, stringify that
@@ -30,4 +34,16 @@ worth exposing that complexity in this API.
 
 See also
 ========
+
 fsattr(5)
+
+
+Status
+======
+
+As of April 2012, this module has been tested and verified to work on SmartOS, a
+distribution of illumos.
+
+While this module uses the runat(1) command to manipulate extended attributes,
+future work could involve a native add-on which uses the openat(2) and related
+interfaces.
