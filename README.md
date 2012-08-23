@@ -1,3 +1,4 @@
+[![build status](https://secure.travis-ci.org/pijewski/node-fsattr.png)](http://travis-ci.org/pijewski/node-fsattr)
 node-fsattr - manipulate SunOS extended file attributes
 =======================================================
 
